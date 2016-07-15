@@ -3,7 +3,7 @@ defmodule ThisData.Api do
   use HTTPoison.Base
 
   # Define our API endpoint host
-  @host "https://thisdata.com"
+  @host "https://api.thisdata.com"
 
   # Automatically prepend the host above onto our URL when we call the API
   # client
