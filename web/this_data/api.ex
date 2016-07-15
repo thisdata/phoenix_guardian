@@ -62,11 +62,8 @@ defmodule ThisData.Api do
         {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
           Logger.debug "ThisData API request successful: " <> Kernel.inspect(body)
           :ok
-        {:ok, %HTTPoison.Response{status_code: 404}} ->
-          Logger.debug "ThisData API request returned Not Found"
-          :error
         {:error, %HTTPoison.Error{reason: reason}} ->
-          Logger.debug "ThisData API request failed for " <> Kernel.inspect(reason)
+          Logger.warn "ThisData API request failed for " <> Kernel.inspect(reason)
           :error
       end
     else
