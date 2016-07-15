@@ -44,6 +44,7 @@ defmodule PhoenixGuardian.Mixfile do
       :ueberauth_google,
       :ueberauth_identity,
       :ueberauth_slack,
+      :httpoison
     ]
   end
 
@@ -72,7 +73,8 @@ defmodule PhoenixGuardian.Mixfile do
      {:ueberauth_facebook, "~> 0.3.2"},
      {:comeonin, "~> 2.4"},
      {:gettext, "~> 0.9"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:httpoison, "~> 0.9.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
